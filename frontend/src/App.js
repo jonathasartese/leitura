@@ -1,19 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as ReadableAPI from './utils/ReadableAPI'
+import MenuBar from './components/MenuBar'
+import PostField from './components/PostField'
+import SubHead from './components/SubHead'
+
+
 
 class App extends Component {
+
+    componentDidMount() {
+        ReadableAPI.getAllCategories().then((categories) => {
+          this.setState({ categories })
+        })
+      }
+
+      
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+<div>
+      <div>
+   
+        <title>Blog &ndash; Layout Examples &ndash; Pure</title>
+        </div>
+        
+        <div>
+
+        <div id="layout" class="pure-g">
+            <MenuBar />
+
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+                    <SubHead />
+                    <PostField />
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
     );
   }
 }
