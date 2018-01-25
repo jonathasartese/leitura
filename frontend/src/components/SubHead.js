@@ -9,7 +9,7 @@ class SubHead extends Component {
   render(){
     return(
         <div>
-            <h1 class="content-subhead">Posts addnew Filter</h1>
+            <h1 className="content-subhead">Posts addnew Filter</h1>
          </div>
     )
   }
