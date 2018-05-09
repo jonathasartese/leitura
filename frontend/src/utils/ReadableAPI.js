@@ -9,7 +9,7 @@ if (!token)
 const headers = {
   'Authorization': token
 }
-
+ 
 export const getAllCategories = () =>
   fetch(`${api}/categories`, { headers })
     .then(res => res.json())

@@ -5,6 +5,14 @@ import registerServiceWorker from './registerServiceWorker';
 import './css/layout/blog.css';
 import './css/layout/pure-min.css';
 import './css/layout/grids-responsive-min.css';
+import { createStore} from 'redux';
+import reducers from './reducers'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENTION__ && window.__REDUX_DEVTOOLS_EXTENTION__() 
+)
+
+ReactDOM.render(<App store={store} />, document.getElementById('root'));
 registerServiceWorker();
+ 

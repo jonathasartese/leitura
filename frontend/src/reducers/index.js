@@ -12,8 +12,9 @@ import {
     DELETE_COMMENT,
     VOTE_COMMENT,
   } from '../actions'
-
-  function timeline (state , action){
+ 
+  function blog (state , action){
+      const { category, post, comment }= action 
     switch (action.type){
         case LOAD_POSTS :
             return{}

@@ -4,10 +4,10 @@ import MenuBar from './MenuBar'
 import PostField from './PostField'
 import SubHead from './SubHead'
 
-
+ 
 
 class Timeline extends Component {
-     
+
   render() {
     return (
         <div>
